@@ -1,0 +1,49 @@
+import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+game_images = [rock, paper, scissors]
+a=int(input("What is your choice? Type 0 for rock ,1 for paper ,2 for scissors "))
+print("you chose ",a)
+if a>=0 and a<3:
+    print(game_images[a])
+b=random.randint(0,2)
+print("Computer chose:",b)
+print(game_images[b])
+if a>=3 or a<0:
+    print("You Typed An Invalid Option. You Lose!")
+elif a==0 and b==2:
+    print("You Win!!")
+elif b>a:
+    print("You Lose!")
+elif a==b:
+    print("It's a tie!")
+elif a==2 and b==0:
+    print("You Lose")
+elif a>b:
+    print("You Win!")
+
+
