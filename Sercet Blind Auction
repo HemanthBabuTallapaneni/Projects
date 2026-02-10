@@ -1,0 +1,28 @@
+import art
+
+print(art.logo)
+bidders = {}
+a=True
+
+
+def finding_highest_bidder(bidding):
+    winner = ""
+    highest_bidder = 0
+    for bid in bidding:
+        amount = bidding[bid]
+        if amount > highest_bidder:
+            highest_bidder = amount
+            winner = bid
+    print(f"The winner is {winner} with a bid of ${highest_bidder}")
+
+
+while a:
+    name = input("What is your name?")
+    bid = int(input("What is your bid? $"))
+    bidders[name] = bid
+    choice = input("Are there any other bidders? Type 'yes or no' ").lower()
+    if choice == "yes":
+        print("\n" * 20)
+    else:
+        finding_highest_bidder(bidders)
+        a = False
