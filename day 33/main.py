@@ -3,8 +3,8 @@ from datetime import datetime
 import random
 import pandas
 
-MY_EMAIL = "tallapanenihemanthbabu@gmail.com"
-PASSWORD = "nwsaycmiyokgcfvq"
+MY_EMAIL = "yourmail@gmail.com"
+PASSWORD = "app_password"
 
 today = (datetime.now())
 today_tuple = (today.month,today.day)
