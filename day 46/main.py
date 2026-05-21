@@ -3,16 +3,6 @@ from bs4 import BeautifulSoup
 import requests
 from ytmusicapi import YTMusic
 
-if not os.path.exists("browser.json"):
-    print("browser.json not found.")
-    print("You need to authenticate with YouTube Music first.")
-    print("Run one of these commands in your terminal from this project folder:\n")
-    print("  Mac:     pbpaste | ytmusicapi browser")
-    print("  Windows: ytmusicapi browser\n")
-    print("Copy the request headers from Firefox first.")
-    print("This will create browser.json.")
-    exit()
-
 date = input("Which year do you want to travel to? Type the data in this format YYYY-MM-DD: ")
 
 url = f"https://appbrewery.github.io/bakeboard-hot-100/{date}"
